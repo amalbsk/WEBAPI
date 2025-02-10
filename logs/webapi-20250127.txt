@@ -1,0 +1,134 @@
+2025-01-27 12:41:38.510 +05:30 [INF] User profile is available. Using 'C:\Users\amal.biju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-27 12:41:38.714 +05:30 [INF] Now listening on: http://localhost:5283
+2025-01-27 12:41:38.717 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-27 12:41:38.722 +05:30 [INF] Hosting environment: Development
+2025-01-27 12:41:38.730 +05:30 [INF] Content root path: C:\Users\amal.biju\vscode\WEBAPI\copy\Webapi
+2025-01-27 12:42:03.039 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-27 12:42:03.161 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 119.252ms
+2025-01-27 12:42:03.218 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-27 12:42:03.226 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 7.2349ms
+2025-01-27 12:42:03.439 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-27 12:42:03.595 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 155.553ms
+2025-01-27 12:43:00.722 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/getitems - null null
+2025-01-27 12:43:00.755 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-01-27 12:43:00.763 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-01-27 12:43:00.811 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-27 12:43:00.817 +05:30 [INF] HTTP GET /api/Inventory/getitems responded 401
+2025-01-27 12:43:00.821 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.set_StatusCode(Int32 value)
+   at ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\amal.biju\vscode\WEBAPI\copy\Webapi\ErrorHandlingMiddleware.cs:line 18
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-27 12:43:00.850 +05:30 [WRN] The response has already started, the error page middleware will not be executed.
+2025-01-27 12:43:00.855 +05:30 [ERR] Connection id "0HN9UK7J419F9", Request id "0HN9UK7J419F9:00000004": An unhandled exception was thrown by the application.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.set_StatusCode(Int32 value)
+   at ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\amal.biju\vscode\WEBAPI\copy\Webapi\ErrorHandlingMiddleware.cs:line 18
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-01-27 12:43:00.866 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/getitems - 401 null text/plain 144.5788ms
+2025-01-27 12:43:19.515 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/login - application/json 53
+2025-01-27 12:43:19.521 +05:30 [INF] CORS policy execution failed.
+2025-01-27 12:43:19.526 +05:30 [INF] Request origin http://localhost:5283 does not have permission to access the resource.
+2025-01-27 12:43:19.548 +05:30 [INF] Executing endpoint 'UserController.Login (webapidemo)'
+2025-01-27 12:43:19.585 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller UserController (webapidemo).
+2025-01-27 12:43:20.174 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Inventory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-01-27 12:43:20.921 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-01-27 12:43:21.016 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-27 12:43:21.035 +05:30 [INF] Executed action UserController.Login (webapidemo) in 1443.2891ms
+2025-01-27 12:43:21.036 +05:30 [INF] Executed endpoint 'UserController.Login (webapidemo)'
+2025-01-27 12:43:21.037 +05:30 [INF] HTTP POST /api/User/login responded 200
+2025-01-27 12:43:21.057 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/login - 200 null application/json; charset=utf-8 1542.0082ms
+2025-01-27 12:43:44.451 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/getitems - null null
+2025-01-27 12:43:44.557 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-01-27 12:43:44.560 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-01-27 12:43:44.673 +05:30 [INF] Retrieving all inventory items
+2025-01-27 12:43:44.753 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-01-27 12:43:44.778 +05:30 [INF] Retrieved 5 items
+2025-01-27 12:43:44.780 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-27 12:43:44.812 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 250.5131ms
+2025-01-27 12:43:44.814 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-01-27 12:43:44.815 +05:30 [INF] HTTP GET /api/Inventory/getitems responded 200
+2025-01-27 12:43:44.827 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/getitems - 200 null application/json; charset=utf-8 375.3402ms
+2025-01-27 12:46:50.160 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/Inventory/additem - application/json 56
+2025-01-27 12:46:50.167 +05:30 [INF] CORS policy execution failed.
+2025-01-27 12:46:50.186 +05:30 [INF] Request origin http://localhost:5283 does not have permission to access the resource.
+2025-01-27 12:46:50.193 +05:30 [INF] Executing endpoint 'InventoryController.AddItem (webapidemo)'
+2025-01-27 12:46:50.206 +05:30 [INF] Route matched with {action = "AddItem", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddItem(Webapi.DTO.AddItemDto) on controller InventoryController (webapidemo).
+2025-01-27 12:46:50.243 +05:30 [INF] Adding new inventory item: gloves
+2025-01-27 12:46:50.422 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Inventories] ([Name], [Price], [Quantity])
+OUTPUT INSERTED.[ItemId]
+VALUES (@p0, @p1, @p2);
+2025-01-27 12:46:50.461 +05:30 [INF] Successfully added item 9
+2025-01-27 12:46:50.463 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'Webapi.Models.Inventory'.
+2025-01-27 12:46:50.488 +05:30 [INF] Executed action InventoryController.AddItem (webapidemo) in 275.2443ms
+2025-01-27 12:46:50.490 +05:30 [INF] Executed endpoint 'InventoryController.AddItem (webapidemo)'
+2025-01-27 12:46:50.491 +05:30 [INF] HTTP POST /api/Inventory/additem responded 201
+2025-01-27 12:46:50.493 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/Inventory/additem - 201 null application/json; charset=utf-8 333.3529ms
+2025-01-27 13:55:45.764 +05:30 [INF] Application is shutting down...
+2025-01-27 14:47:02.605 +05:30 [INF] User profile is available. Using 'C:\Users\amal.biju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-27 14:47:02.723 +05:30 [INF] Now listening on: http://localhost:5283
+2025-01-27 14:47:02.725 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-27 14:47:02.726 +05:30 [INF] Hosting environment: Development
+2025-01-27 14:47:02.727 +05:30 [INF] Content root path: C:\Users\amal.biju\vscode\WEBAPI\copy\Webapi
+2025-01-27 14:47:45.182 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-01-27 14:47:45.218 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-01-27 14:47:45.219 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-01-27 14:47:45.384 +05:30 [INF] Executing endpoint 'UserController.Login (webapidemo)'
+2025-01-27 14:47:45.400 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller UserController (webapidemo).
+2025-01-27 14:47:45.884 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Inventory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-01-27 14:47:46.471 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-01-27 14:47:46.548 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-27 14:47:46.563 +05:30 [INF] Executed action UserController.Login (webapidemo) in 1152.3105ms
+2025-01-27 14:47:46.569 +05:30 [INF] Executed endpoint 'UserController.Login (webapidemo)'
+2025-01-27 14:47:46.571 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-01-27 14:47:46.587 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 1405.7663ms
+2025-01-27 14:53:34.844 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-01-27 14:53:34.852 +05:30 [INF] Executing endpoint 'UserController.Login (webapidemo)'
+2025-01-27 14:53:34.855 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller UserController (webapidemo).
+2025-01-27 14:53:34.900 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-01-27 14:53:34.904 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-27 14:53:34.906 +05:30 [INF] Executed action UserController.Login (webapidemo) in 47.2551ms
+2025-01-27 14:53:34.908 +05:30 [INF] Executed endpoint 'UserController.Login (webapidemo)'
+2025-01-27 14:53:34.909 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-01-27 14:53:34.911 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 67.1637ms
+2025-01-27 14:53:43.429 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-01-27 14:53:43.434 +05:30 [INF] Executing endpoint 'UserController.Login (webapidemo)'
+2025-01-27 14:53:43.436 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller UserController (webapidemo).
+2025-01-27 14:53:43.499 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-01-27 14:53:43.505 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-27 14:53:43.508 +05:30 [INF] Executed action UserController.Login (webapidemo) in 68.5109ms
+2025-01-27 14:53:43.510 +05:30 [INF] Executed endpoint 'UserController.Login (webapidemo)'
+2025-01-27 14:53:43.511 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-01-27 14:53:43.514 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 84.3828ms
+2025-01-27 14:57:12.141 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-27 14:57:12.182 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 40.9389ms
+2025-01-27 14:57:12.197 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-27 14:57:12.202 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 5.3021ms
+2025-01-27 14:57:12.321 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-27 14:57:12.399 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 78.1499ms

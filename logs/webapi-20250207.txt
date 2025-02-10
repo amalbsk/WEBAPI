@@ -1,0 +1,819 @@
+2025-02-07 10:36:10.134 +05:30 [INF] User profile is available. Using 'C:\Users\amal.biju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-07 10:36:10.255 +05:30 [INF] Now listening on: http://localhost:5283
+2025-02-07 10:36:10.262 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-07 10:36:10.271 +05:30 [INF] Hosting environment: Development
+2025-02-07 10:36:10.276 +05:30 [INF] Content root path: C:\Users\amal.biju\vscode\WEBAPI\Webapi
+2025-02-07 10:36:16.854 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/ - null null
+2025-02-07 10:36:16.959 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-02-07 10:36:16.962 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-02-07 10:36:17.077 +05:30 [INF] HTTP GET / responded 404
+2025-02-07 10:36:17.089 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/ - 404 0 null 236.9623ms
+2025-02-07 10:36:17.113 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5283/, Response status code: 404
+2025-02-07 10:36:20.471 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-02-07 10:36:20.555 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 83.5732ms
+2025-02-07 10:36:20.584 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-02-07 10:36:20.589 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 5.5953ms
+2025-02-07 10:36:20.920 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-02-07 10:36:21.009 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 88.9952ms
+2025-02-07 10:37:32.748 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-07 10:37:32.758 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:37:32.778 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 10:37:33.548 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Inventory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-02-07 10:37:34.331 +05:30 [INF] Executed DbCommand (43ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 10:37:34.416 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 10:37:34.427 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 1645.2118ms
+2025-02-07 10:37:34.428 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:37:34.431 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 10:37:34.446 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 1697.8304ms
+2025-02-07 10:37:34.489 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 10:37:34.544 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 10:37:34.547 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 10:37:34.623 +05:30 [INF] Retrieving all inventory items
+2025-02-07 10:37:34.661 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 10:37:34.674 +05:30 [INF] Retrieved 6 items
+2025-02-07 10:37:34.676 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 10:37:34.773 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 224.2941ms
+2025-02-07 10:37:34.774 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 10:37:34.782 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 10:37:34.784 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 295.3795ms
+2025-02-07 10:38:35.047 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/getitem/14 - null null
+2025-02-07 10:38:35.062 +05:30 [INF] Executing endpoint 'InventoryController.GetItemById (webapidemo)'
+2025-02-07 10:38:35.077 +05:30 [INF] Route matched with {action = "GetItemById", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItemById(Int32) on controller InventoryController (webapidemo).
+2025-02-07 10:38:35.096 +05:30 [INF] Retrieving item with ID: 14
+2025-02-07 10:38:35.243 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+WHERE [i].[ItemId] = @__p_0
+2025-02-07 10:38:35.245 +05:30 [INF] Successfully retrieved item 14
+2025-02-07 10:38:35.247 +05:30 [INF] Executing OkObjectResult, writing value of type 'Webapi.Models.Inventory'.
+2025-02-07 10:38:35.249 +05:30 [INF] Executed action InventoryController.GetItemById (webapidemo) in 161.4257ms
+2025-02-07 10:38:35.253 +05:30 [INF] Executed endpoint 'InventoryController.GetItemById (webapidemo)'
+2025-02-07 10:38:35.254 +05:30 [INF] HTTP GET /api/Inventory/getitem/14 responded 200
+2025-02-07 10:38:35.259 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/getitem/14 - 200 null application/json; charset=utf-8 211.9573ms
+2025-02-07 10:38:46.647 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5283/api/Inventory/UpdateItem/14 - application/json; charset=utf-8 40
+2025-02-07 10:38:46.658 +05:30 [INF] Executing endpoint 'InventoryController.UpdateItem (webapidemo)'
+2025-02-07 10:38:46.661 +05:30 [INF] Route matched with {action = "UpdateItem", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateItem(Int32, Webapi.DTO.UpdateItemDto) on controller InventoryController (webapidemo).
+2025-02-07 10:38:46.696 +05:30 [INF] Attempting to update item with ID: 14
+2025-02-07 10:38:46.708 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+WHERE [i].[ItemId] = @__p_0
+2025-02-07 10:38:46.807 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Inventories] SET [Price] = @p0
+OUTPUT 1
+WHERE [ItemId] = @p1;
+2025-02-07 10:38:46.824 +05:30 [INF] Successfully updated item 14
+2025-02-07 10:38:46.826 +05:30 [INF] Executing OkObjectResult, writing value of type 'Webapi.Models.Inventory'.
+2025-02-07 10:38:46.828 +05:30 [INF] Executed action InventoryController.UpdateItem (webapidemo) in 160.4789ms
+2025-02-07 10:38:46.833 +05:30 [INF] Executed endpoint 'InventoryController.UpdateItem (webapidemo)'
+2025-02-07 10:38:46.943 +05:30 [INF] HTTP PUT /api/Inventory/UpdateItem/14 responded 200
+2025-02-07 10:38:46.946 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5283/api/Inventory/UpdateItem/14 - 200 null application/json; charset=utf-8 298.8466ms
+2025-02-07 10:38:50.584 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 10:38:50.588 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 10:38:50.589 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 10:38:50.693 +05:30 [INF] Retrieving all inventory items
+2025-02-07 10:38:50.697 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 10:38:50.714 +05:30 [INF] Retrieved 6 items
+2025-02-07 10:38:50.715 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 10:38:50.717 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 24.3171ms
+2025-02-07 10:38:50.718 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 10:38:50.725 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 10:38:50.728 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 143.8887ms
+2025-02-07 10:42:34.588 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 47
+2025-02-07 10:42:34.603 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:42:34.606 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 10:42:34.638 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 10:42:34.647 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-02-07 10:42:34.651 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 33.9295ms
+2025-02-07 10:42:34.653 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:42:34.655 +05:30 [INF] HTTP POST /api/User/Login responded 401
+2025-02-07 10:42:34.658 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 401 null application/json; charset=utf-8 69.2944ms
+2025-02-07 10:42:56.842 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 47
+2025-02-07 10:42:56.846 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:42:56.864 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 10:42:56.892 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 10:42:56.895 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-02-07 10:42:56.897 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 22.283ms
+2025-02-07 10:42:56.898 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:42:56.902 +05:30 [INF] HTTP POST /api/User/Login responded 401
+2025-02-07 10:42:56.904 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 401 null application/json; charset=utf-8 62.0621ms
+2025-02-07 10:47:19.486 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 47
+2025-02-07 10:47:19.492 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:47:19.493 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 10:47:19.629 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 47
+2025-02-07 10:47:19.631 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:47:19.641 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 10:47:19.693 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 10:47:19.694 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 10:47:19.695 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-02-07 10:47:19.697 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-02-07 10:47:19.697 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 201.8619ms
+2025-02-07 10:47:19.699 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 55.6283ms
+2025-02-07 10:47:19.701 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:47:19.703 +05:30 [INF] HTTP POST /api/User/Login responded 401
+2025-02-07 10:47:19.702 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:47:19.705 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 401 null application/json; charset=utf-8 218.6015ms
+2025-02-07 10:47:19.705 +05:30 [INF] HTTP POST /api/User/Login responded 401
+2025-02-07 10:47:19.708 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 401 null application/json; charset=utf-8 79.4734ms
+2025-02-07 10:47:27.091 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 47
+2025-02-07 10:47:27.105 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:47:27.113 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 10:47:27.140 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 10:47:27.143 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-02-07 10:47:27.146 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 14.4209ms
+2025-02-07 10:47:27.147 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:47:27.148 +05:30 [INF] HTTP POST /api/User/Login responded 401
+2025-02-07 10:47:27.155 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 401 null application/json; charset=utf-8 63.233ms
+2025-02-07 10:47:30.778 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 48
+2025-02-07 10:47:30.793 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:47:30.796 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 10:47:30.808 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 10:47:30.828 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-02-07 10:47:30.829 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 30.5942ms
+2025-02-07 10:47:30.834 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:47:30.844 +05:30 [INF] HTTP POST /api/User/Login responded 401
+2025-02-07 10:47:30.845 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 401 null application/json; charset=utf-8 67.3493ms
+2025-02-07 10:47:39.435 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 50
+2025-02-07 10:47:39.449 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:47:39.451 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 10:47:39.467 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 10:47:39.481 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-02-07 10:47:39.483 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 21.329ms
+2025-02-07 10:47:39.484 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:47:39.485 +05:30 [INF] HTTP POST /api/User/Login responded 401
+2025-02-07 10:47:39.492 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 401 null application/json; charset=utf-8 57.08ms
+2025-02-07 10:47:46.279 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 59
+2025-02-07 10:47:46.286 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:47:46.313 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 10:47:46.318 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 10:47:46.330 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-02-07 10:47:46.334 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 18.7062ms
+2025-02-07 10:47:46.337 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:47:46.338 +05:30 [INF] HTTP POST /api/User/Login responded 401
+2025-02-07 10:47:46.346 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 401 null application/json; charset=utf-8 67.3869ms
+2025-02-07 10:48:58.316 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 59
+2025-02-07 10:48:58.329 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:48:58.334 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 10:48:58.383 +05:30 [INF] Executed DbCommand (32ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 10:48:58.389 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-02-07 10:48:58.397 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 49.3439ms
+2025-02-07 10:48:58.399 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:48:58.400 +05:30 [INF] HTTP POST /api/User/Login responded 401
+2025-02-07 10:48:58.402 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 401 null application/json; charset=utf-8 86.1095ms
+2025-02-07 10:49:03.007 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 59
+2025-02-07 10:49:03.357 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:49:03.369 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 10:49:03.387 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 10:49:03.389 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-02-07 10:49:03.390 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 15.7399ms
+2025-02-07 10:49:03.399 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:49:03.401 +05:30 [INF] HTTP POST /api/User/Login responded 401
+2025-02-07 10:49:03.403 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 401 null application/json; charset=utf-8 396.1963ms
+2025-02-07 10:49:03.450 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 59
+2025-02-07 10:49:03.452 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:49:03.453 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 10:49:03.457 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 10:49:03.466 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-02-07 10:49:03.467 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 11.7565ms
+2025-02-07 10:49:03.470 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:49:03.473 +05:30 [INF] HTTP POST /api/User/Login responded 401
+2025-02-07 10:49:03.475 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 401 null application/json; charset=utf-8 24.913ms
+2025-02-07 10:49:08.828 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 59
+2025-02-07 10:49:08.832 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:49:08.836 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 10:49:08.854 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 10:49:08.867 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-02-07 10:49:08.869 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 29.1932ms
+2025-02-07 10:49:08.872 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:49:08.873 +05:30 [INF] HTTP POST /api/User/Login responded 401
+2025-02-07 10:49:08.876 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 401 null application/json; charset=utf-8 47.1042ms
+2025-02-07 10:49:17.564 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 50
+2025-02-07 10:49:17.573 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:49:17.599 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 10:49:17.632 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 10:49:17.636 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-02-07 10:49:17.637 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 30.3339ms
+2025-02-07 10:49:17.639 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:49:17.640 +05:30 [INF] HTTP POST /api/User/Login responded 401
+2025-02-07 10:49:17.643 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 401 null application/json; charset=utf-8 78.4895ms
+2025-02-07 10:49:23.470 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-07 10:49:23.472 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:49:23.473 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 10:49:23.508 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 10:49:23.511 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 10:49:23.512 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 27.7854ms
+2025-02-07 10:49:23.522 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:49:23.523 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 10:49:23.526 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 55.285ms
+2025-02-07 10:49:23.539 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 10:49:23.542 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 10:49:23.543 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 10:49:23.546 +05:30 [INF] Retrieving all inventory items
+2025-02-07 10:49:23.557 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 10:49:23.560 +05:30 [INF] Retrieved 6 items
+2025-02-07 10:49:23.561 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 10:49:23.563 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 17.3219ms
+2025-02-07 10:49:23.571 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 10:49:23.573 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 10:49:23.574 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 34.5167ms
+2025-02-07 10:54:29.147 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 47
+2025-02-07 10:54:29.149 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:54:29.150 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 10:54:29.231 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 10:54:29.235 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-02-07 10:54:29.237 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 85.9082ms
+2025-02-07 10:54:29.239 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:54:29.240 +05:30 [INF] HTTP POST /api/User/Login responded 401
+2025-02-07 10:54:29.245 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 401 null application/json; charset=utf-8 98.0199ms
+2025-02-07 10:54:32.570 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-07 10:54:32.573 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:54:32.578 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 10:54:32.586 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 10:54:32.591 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 10:54:32.599 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 16.9964ms
+2025-02-07 10:54:32.604 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 10:54:32.618 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 10:54:32.619 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 49.6991ms
+2025-02-07 10:54:32.638 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 10:54:32.640 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 10:54:32.641 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 10:54:32.731 +05:30 [INF] Retrieving all inventory items
+2025-02-07 10:54:32.735 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 10:54:32.753 +05:30 [INF] Retrieved 6 items
+2025-02-07 10:54:32.754 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 10:54:32.755 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 23.9021ms
+2025-02-07 10:54:32.756 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 10:54:32.756 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 10:54:32.757 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 119.4965ms
+2025-02-07 11:02:25.389 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-07 11:02:25.391 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:02:25.392 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 11:02:25.466 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 11:02:25.472 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 11:02:25.474 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 79.7802ms
+2025-02-07 11:02:25.476 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:02:25.478 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 11:02:25.481 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 92.2859ms
+2025-02-07 11:02:25.530 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 11:02:25.534 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:02:25.542 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 11:02:25.545 +05:30 [INF] Retrieving all inventory items
+2025-02-07 11:02:25.557 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 11:02:25.559 +05:30 [INF] Retrieved 6 items
+2025-02-07 11:02:25.560 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:02:25.563 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 18.1154ms
+2025-02-07 11:02:25.565 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:02:25.567 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 11:02:25.574 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 43.3677ms
+2025-02-07 11:02:33.611 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-07 11:02:33.624 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:02:33.625 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 11:02:33.650 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 11:02:33.659 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 11:02:33.661 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 26.5793ms
+2025-02-07 11:02:33.665 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:02:33.666 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 11:02:33.669 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 58.0638ms
+2025-02-07 11:02:33.682 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 11:02:33.685 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:02:33.686 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 11:02:33.695 +05:30 [INF] Retrieving all inventory items
+2025-02-07 11:02:33.698 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 11:02:33.700 +05:30 [INF] Retrieved 6 items
+2025-02-07 11:02:33.701 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:02:33.703 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 7.8853ms
+2025-02-07 11:02:33.710 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:02:33.712 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 11:02:33.713 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 30.8803ms
+2025-02-07 11:21:40.205 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-07 11:21:40.211 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:21:40.213 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 11:21:40.441 +05:30 [INF] Executed DbCommand (69ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 11:21:40.449 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 11:21:40.460 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 245.7908ms
+2025-02-07 11:21:40.462 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:21:40.464 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 11:21:40.477 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 271.5799ms
+2025-02-07 11:21:40.495 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 11:21:40.616 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:21:40.634 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 11:21:40.636 +05:30 [INF] Retrieving all inventory items
+2025-02-07 11:21:40.645 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 11:21:40.647 +05:30 [INF] Retrieved 6 items
+2025-02-07 11:21:40.655 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:21:40.656 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 20.0688ms
+2025-02-07 11:21:40.659 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:21:40.661 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 11:21:40.664 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 169.3639ms
+2025-02-07 11:24:47.168 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-07 11:24:47.301 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:24:47.304 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 11:24:47.383 +05:30 [INF] Executed DbCommand (56ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 11:24:47.400 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 11:24:47.405 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 98.5916ms
+2025-02-07 11:24:47.407 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:24:47.411 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 11:24:47.455 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 287.1557ms
+2025-02-07 11:24:47.481 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 11:24:47.487 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:24:47.488 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 11:24:47.490 +05:30 [INF] Retrieving all inventory items
+2025-02-07 11:24:47.497 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 11:24:47.509 +05:30 [INF] Retrieved 6 items
+2025-02-07 11:24:47.509 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:24:47.511 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 21.049ms
+2025-02-07 11:24:47.517 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:24:47.524 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 11:24:47.525 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 44.6476ms
+2025-02-07 11:24:54.553 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-07 11:24:54.596 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:24:54.606 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 11:24:54.613 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 11:24:54.642 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 11:24:54.662 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 52.5648ms
+2025-02-07 11:24:54.671 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:24:54.675 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 11:24:54.677 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 124.0085ms
+2025-02-07 11:24:54.695 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 11:24:54.708 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:24:54.710 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 11:24:54.711 +05:30 [INF] Retrieving all inventory items
+2025-02-07 11:24:54.713 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 11:24:54.724 +05:30 [INF] Retrieved 6 items
+2025-02-07 11:24:54.725 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:24:54.727 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 15.8995ms
+2025-02-07 11:24:54.746 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:24:54.753 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 11:24:54.756 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 61.8165ms
+2025-02-07 11:25:03.076 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-07 11:25:03.131 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:25:03.143 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 11:25:03.162 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 11:25:03.166 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 11:25:03.175 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 16.7207ms
+2025-02-07 11:25:03.177 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:25:03.177 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 11:25:03.179 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 102.7264ms
+2025-02-07 11:25:03.191 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 11:25:03.194 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:25:03.195 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 11:25:03.197 +05:30 [INF] Retrieving all inventory items
+2025-02-07 11:25:03.207 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 11:25:03.209 +05:30 [INF] Retrieved 6 items
+2025-02-07 11:25:03.210 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:25:03.211 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 13.936ms
+2025-02-07 11:25:03.213 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:25:03.214 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 11:25:03.215 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 23.8335ms
+2025-02-07 11:25:06.637 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-07 11:25:06.644 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:25:06.647 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 11:25:06.664 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 11:25:06.666 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 11:25:06.676 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 26.5436ms
+2025-02-07 11:25:06.678 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:25:06.679 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 11:25:06.681 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 43.5971ms
+2025-02-07 11:25:06.694 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 11:25:06.699 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:25:06.712 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 11:25:06.733 +05:30 [INF] Retrieving all inventory items
+2025-02-07 11:25:06.748 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 11:25:06.750 +05:30 [INF] Retrieved 6 items
+2025-02-07 11:25:06.767 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:25:06.794 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 61.2131ms
+2025-02-07 11:25:06.797 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:25:06.798 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 11:25:06.805 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 110.4242ms
+2025-02-07 11:28:25.231 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-07 11:28:25.240 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:28:25.241 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 11:28:25.282 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 11:28:25.292 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 11:28:25.295 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 51.1705ms
+2025-02-07 11:28:25.299 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:28:25.310 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 11:28:25.311 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 80.2222ms
+2025-02-07 11:28:25.366 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 11:28:25.379 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:28:25.382 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 11:28:25.393 +05:30 [INF] Retrieving all inventory items
+2025-02-07 11:28:25.409 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 11:28:25.413 +05:30 [INF] Retrieved 6 items
+2025-02-07 11:28:25.428 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:28:25.434 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 41.0217ms
+2025-02-07 11:28:25.479 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:28:25.481 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 11:28:25.482 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 115.4054ms
+2025-02-07 11:31:13.376 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-07 11:31:13.382 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:31:13.402 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 11:31:13.560 +05:30 [INF] Executed DbCommand (139ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 11:31:13.566 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 11:31:13.578 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 173.3154ms
+2025-02-07 11:31:13.587 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:31:13.588 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 11:31:13.589 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 212.8948ms
+2025-02-07 11:31:13.671 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 11:31:13.677 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:31:13.678 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 11:31:13.686 +05:30 [INF] Retrieving all inventory items
+2025-02-07 11:31:13.693 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 11:31:13.700 +05:30 [INF] Retrieved 6 items
+2025-02-07 11:31:13.701 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:31:13.705 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 19.2919ms
+2025-02-07 11:31:13.707 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:31:13.708 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 11:31:13.710 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 38.754ms
+2025-02-07 11:31:18.950 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 48
+2025-02-07 11:31:18.954 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:31:18.977 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 11:31:18.989 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 11:31:18.991 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-02-07 11:31:18.993 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 14.2764ms
+2025-02-07 11:31:18.996 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:31:19.002 +05:30 [INF] HTTP POST /api/User/Login responded 401
+2025-02-07 11:31:19.008 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 401 null application/json; charset=utf-8 58.0687ms
+2025-02-07 11:31:23.377 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-07 11:31:23.386 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:31:23.390 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 11:31:23.411 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 11:31:23.421 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 11:31:23.424 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 29.5111ms
+2025-02-07 11:31:23.426 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:31:23.427 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 11:31:23.429 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 51.5662ms
+2025-02-07 11:31:23.444 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 11:31:23.447 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:31:23.455 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 11:31:23.458 +05:30 [INF] Retrieving all inventory items
+2025-02-07 11:31:23.459 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 11:31:23.462 +05:30 [INF] Retrieved 6 items
+2025-02-07 11:31:23.463 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:31:23.469 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 11.5896ms
+2025-02-07 11:31:23.473 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:31:23.474 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 11:31:23.475 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 31.8199ms
+2025-02-07 11:31:37.425 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 11:31:37.477 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:31:37.478 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 11:31:37.480 +05:30 [INF] Retrieving all inventory items
+2025-02-07 11:31:37.482 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 11:31:37.484 +05:30 [INF] Retrieved 6 items
+2025-02-07 11:31:37.492 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:31:37.494 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 14.282ms
+2025-02-07 11:31:37.498 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:31:37.499 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 11:31:37.500 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 75.2983ms
+2025-02-07 11:53:57.338 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-07 11:53:57.342 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:53:57.343 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 11:53:57.433 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 11:53:57.437 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 11:53:57.438 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 93.623ms
+2025-02-07 11:53:57.439 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:53:57.440 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 11:53:57.441 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 102.2715ms
+2025-02-07 11:53:57.483 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 11:53:57.492 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:53:57.493 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 11:53:57.494 +05:30 [INF] Retrieving all inventory items
+2025-02-07 11:53:57.498 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 11:53:57.506 +05:30 [INF] Retrieved 6 items
+2025-02-07 11:53:57.508 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:53:57.509 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 15.2574ms
+2025-02-07 11:53:57.511 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:53:57.512 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 11:53:57.513 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 30.1133ms
+2025-02-07 11:54:03.077 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 11:54:03.080 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:54:03.081 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 11:54:03.084 +05:30 [INF] Retrieving all inventory items
+2025-02-07 11:54:03.111 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 11:54:03.114 +05:30 [INF] Retrieved 6 items
+2025-02-07 11:54:03.115 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:54:03.116 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 32.7011ms
+2025-02-07 11:54:03.118 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:54:03.128 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 11:54:03.129 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 51.6462ms
+2025-02-07 11:54:09.050 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 11:54:09.055 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:54:09.064 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 11:54:09.081 +05:30 [INF] Retrieving all inventory items
+2025-02-07 11:54:09.086 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 11:54:09.095 +05:30 [INF] Retrieved 6 items
+2025-02-07 11:54:09.097 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:54:09.098 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 18.0117ms
+2025-02-07 11:54:09.100 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:54:09.101 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 11:54:09.102 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 52.4779ms
+2025-02-07 11:56:08.032 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-07 11:56:08.039 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:56:08.040 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 11:56:08.045 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 11:56:08.048 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 11:56:08.049 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 7.6701ms
+2025-02-07 11:56:08.059 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:56:08.060 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 11:56:08.061 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 29ms
+2025-02-07 11:56:08.108 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 11:56:08.110 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:56:08.111 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 11:56:08.112 +05:30 [INF] Retrieving all inventory items
+2025-02-07 11:56:08.115 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 11:56:08.118 +05:30 [INF] Retrieved 6 items
+2025-02-07 11:56:08.123 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:56:08.124 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 12.628ms
+2025-02-07 11:56:08.125 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:56:08.126 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 11:56:08.128 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 20.1194ms
+2025-02-07 11:56:16.578 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-07 11:56:16.627 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:56:16.647 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 11:56:16.658 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 11:56:16.685 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 11:56:16.697 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 48.6168ms
+2025-02-07 11:56:16.701 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:56:16.710 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 11:56:16.716 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 137.4314ms
+2025-02-07 11:56:16.731 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 11:56:16.742 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:56:16.747 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 11:56:16.750 +05:30 [INF] Retrieving all inventory items
+2025-02-07 11:56:16.767 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 11:56:16.776 +05:30 [INF] Retrieved 6 items
+2025-02-07 11:56:16.777 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:56:16.779 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 28.6907ms
+2025-02-07 11:56:16.780 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:56:16.781 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 11:56:16.782 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 50.9564ms
+2025-02-07 11:56:22.143 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 11:56:22.148 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:56:22.151 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 11:56:22.169 +05:30 [INF] Retrieving all inventory items
+2025-02-07 11:56:22.181 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 11:56:22.184 +05:30 [INF] Retrieved 6 items
+2025-02-07 11:56:22.186 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:56:22.197 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 28.4013ms
+2025-02-07 11:56:22.200 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:56:22.202 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 11:56:22.218 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 74.5705ms
+2025-02-07 11:56:32.996 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Register - application/json; charset=utf-8 45
+2025-02-07 11:56:32.999 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Register (webapidemo)'
+2025-02-07 11:56:33.034 +05:30 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Webapi.DTO.UserRegisterDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 11:56:33.081 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__userDto_Username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Username] = @__userDto_Username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-07 11:56:33.152 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Password], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2025-02-07 11:56:33.181 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-02-07 11:56:33.183 +05:30 [INF] Executed action Webapi.Controllers.UserController.Register (webapidemo) in 147.4197ms
+2025-02-07 11:56:33.184 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Register (webapidemo)'
+2025-02-07 11:56:33.185 +05:30 [INF] HTTP POST /api/User/Register responded 200
+2025-02-07 11:56:33.187 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Register - 200 null application/json; charset=utf-8 191.2905ms
+2025-02-07 11:56:39.107 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 45
+2025-02-07 11:56:39.114 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:56:39.131 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 11:56:39.140 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 11:56:39.150 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 11:56:39.152 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 13.2373ms
+2025-02-07 11:56:39.153 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 11:56:39.154 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 11:56:39.155 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 48.1892ms
+2025-02-07 11:56:39.167 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 11:56:39.170 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:56:39.171 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 11:56:39.172 +05:30 [INF] Retrieving all inventory items
+2025-02-07 11:56:39.174 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 11:56:39.184 +05:30 [INF] Retrieved 6 items
+2025-02-07 11:56:39.185 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:56:39.186 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 13.9972ms
+2025-02-07 11:56:39.188 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 11:56:39.189 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 11:56:39.190 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 23.0866ms
+2025-02-07 12:25:06.220 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-07 12:25:06.223 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 12:25:06.224 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 12:25:06.348 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 12:25:06.351 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 12:25:06.352 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 122.112ms
+2025-02-07 12:25:06.353 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 12:25:06.354 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 12:25:06.356 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 135.3868ms
+2025-02-07 12:25:06.440 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 12:25:06.443 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 12:25:06.444 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 12:25:06.471 +05:30 [INF] Retrieving all inventory items
+2025-02-07 12:25:06.487 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 12:25:06.489 +05:30 [INF] Retrieved 6 items
+2025-02-07 12:25:06.489 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 12:25:06.490 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 20.0314ms
+2025-02-07 12:25:06.507 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 12:25:06.523 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 12:25:06.552 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 112.2243ms
+2025-02-07 13:01:28.171 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-07 13:01:28.175 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 13:01:28.176 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 13:01:28.279 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 13:01:28.281 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 13:01:28.285 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 107.4062ms
+2025-02-07 13:01:28.286 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 13:01:28.287 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 13:01:28.289 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 118.0134ms
+2025-02-07 13:01:28.341 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 13:01:28.344 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 13:01:28.345 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 13:01:28.347 +05:30 [INF] Retrieving all inventory items
+2025-02-07 13:01:28.359 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 13:01:28.361 +05:30 [INF] Retrieved 6 items
+2025-02-07 13:01:28.362 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 13:01:28.363 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 15.7621ms
+2025-02-07 13:01:28.364 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 13:01:28.369 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 13:01:28.371 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 30.1371ms
+2025-02-07 14:14:52.062 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-07 14:14:52.065 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 14:14:52.066 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-07 14:14:52.159 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-07 14:14:52.161 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-07 14:14:52.162 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 94.9146ms
+2025-02-07 14:14:52.164 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-07 14:14:52.166 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-07 14:14:52.167 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 105.0201ms
+2025-02-07 14:14:52.177 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-07 14:14:52.181 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 14:14:52.185 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-07 14:14:52.187 +05:30 [INF] Retrieving all inventory items
+2025-02-07 14:14:52.192 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-07 14:14:52.195 +05:30 [INF] Retrieved 6 items
+2025-02-07 14:14:52.196 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 14:14:52.201 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 14.6093ms
+2025-02-07 14:14:52.204 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-07 14:14:52.205 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-07 14:14:52.207 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 29.9986ms

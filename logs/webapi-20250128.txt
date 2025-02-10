@@ -1,0 +1,325 @@
+2025-01-28 09:37:01.541 +05:30 [INF] User profile is available. Using 'C:\Users\amal.biju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-28 09:37:01.657 +05:30 [INF] Now listening on: http://localhost:5283
+2025-01-28 09:37:01.659 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-28 09:37:01.660 +05:30 [INF] Hosting environment: Development
+2025-01-28 09:37:01.661 +05:30 [INF] Content root path: C:\Users\amal.biju\vscode\WEBAPI\copy\Webapi
+2025-01-28 09:37:11.387 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/ - null null
+2025-01-28 09:37:11.440 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-01-28 09:37:11.442 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-01-28 09:37:11.477 +05:30 [INF] HTTP GET / responded 404
+2025-01-28 09:37:11.486 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/ - 404 0 null 100.6901ms
+2025-01-28 09:37:11.560 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5283/, Response status code: 404
+2025-01-28 09:37:29.253 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/ - null null
+2025-01-28 09:37:29.263 +05:30 [INF] HTTP GET / responded 404
+2025-01-28 09:37:29.266 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/ - 404 0 null 12.2753ms
+2025-01-28 09:37:29.270 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5283/, Response status code: 404
+2025-01-28 09:37:33.527 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:37:33.585 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 58.8212ms
+2025-01-28 09:37:33.613 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 09:37:33.615 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 2.413ms
+2025-01-28 09:37:33.970 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 09:37:34.050 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 79.6821ms
+2025-01-28 09:39:40.722 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/register - application/json 50
+2025-01-28 09:39:40.728 +05:30 [INF] CORS policy execution failed.
+2025-01-28 09:39:40.730 +05:30 [INF] Request origin http://localhost:5283 does not have permission to access the resource.
+2025-01-28 09:39:40.739 +05:30 [INF] Executing endpoint 'UserController.Register (webapidemo)'
+2025-01-28 09:39:40.757 +05:30 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Webapi.DTO.UserRegisterDto) on controller UserController (webapidemo).
+2025-01-28 09:39:41.101 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Inventory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-01-28 09:39:41.572 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@__userDto_Username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Username] = @__userDto_Username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-01-28 09:39:41.697 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Password], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2025-01-28 09:39:41.725 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-01-28 09:39:41.734 +05:30 [INF] Executed action UserController.Register (webapidemo) in 970.0969ms
+2025-01-28 09:39:41.738 +05:30 [INF] Executed endpoint 'UserController.Register (webapidemo)'
+2025-01-28 09:39:41.741 +05:30 [INF] HTTP POST /api/User/register responded 200
+2025-01-28 09:39:41.753 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/register - 200 null text/plain; charset=utf-8 1030.456ms
+2025-01-28 09:40:24.398 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/login - application/json 50
+2025-01-28 09:40:24.401 +05:30 [INF] CORS policy execution failed.
+2025-01-28 09:40:24.404 +05:30 [INF] Request origin http://localhost:5283 does not have permission to access the resource.
+2025-01-28 09:40:24.406 +05:30 [INF] Executing endpoint 'UserController.Login (webapidemo)'
+2025-01-28 09:40:24.411 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller UserController (webapidemo).
+2025-01-28 09:40:24.469 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-01-28 09:40:24.492 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-28 09:40:24.498 +05:30 [INF] Executed action UserController.Login (webapidemo) in 84.3475ms
+2025-01-28 09:40:24.500 +05:30 [INF] Executed endpoint 'UserController.Login (webapidemo)'
+2025-01-28 09:40:24.501 +05:30 [INF] HTTP POST /api/User/login responded 200
+2025-01-28 09:40:24.506 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/login - 200 null application/json; charset=utf-8 107.3743ms
+2025-01-28 09:40:57.461 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/User/protected - null null
+2025-01-28 09:40:57.500 +05:30 [INF] Executing endpoint 'UserController.Protected (webapidemo)'
+2025-01-28 09:40:57.503 +05:30 [INF] Route matched with {action = "Protected", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Protected() on controller UserController (webapidemo).
+2025-01-28 09:40:57.509 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-01-28 09:40:57.511 +05:30 [INF] Executed action UserController.Protected (webapidemo) in 4.1861ms
+2025-01-28 09:40:57.515 +05:30 [INF] Executed endpoint 'UserController.Protected (webapidemo)'
+2025-01-28 09:40:57.516 +05:30 [INF] HTTP GET /api/User/protected responded 200
+2025-01-28 09:40:57.519 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/User/protected - 200 null text/plain; charset=utf-8 57.761ms
+2025-01-28 09:41:24.961 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/getitems - null null
+2025-01-28 09:41:24.966 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-01-28 09:41:24.972 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-01-28 09:41:25.021 +05:30 [INF] Retrieving all inventory items
+2025-01-28 09:41:25.077 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-01-28 09:41:25.087 +05:30 [INF] Retrieved 6 items
+2025-01-28 09:41:25.089 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-28 09:41:25.096 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 122.3401ms
+2025-01-28 09:41:25.099 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-01-28 09:41:25.100 +05:30 [INF] HTTP GET /api/Inventory/getitems responded 200
+2025-01-28 09:41:25.104 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/getitems - 200 null application/json; charset=utf-8 142.4175ms
+2025-01-28 09:41:56.831 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/Inventory/additem - application/json 60
+2025-01-28 09:41:56.833 +05:30 [INF] CORS policy execution failed.
+2025-01-28 09:41:56.834 +05:30 [INF] Request origin http://localhost:5283 does not have permission to access the resource.
+2025-01-28 09:41:56.837 +05:30 [INF] Executing endpoint 'InventoryController.AddItem (webapidemo)'
+2025-01-28 09:41:56.841 +05:30 [INF] Route matched with {action = "AddItem", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddItem(Webapi.DTO.AddItemDto) on controller InventoryController (webapidemo).
+2025-01-28 09:41:56.854 +05:30 [INF] Adding new inventory item: tennis bat
+2025-01-28 09:41:56.876 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Inventories] ([Name], [Price], [Quantity])
+OUTPUT INSERTED.[ItemId]
+VALUES (@p0, @p1, @p2);
+2025-01-28 09:41:56.883 +05:30 [INF] Successfully added item 10
+2025-01-28 09:41:56.885 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'Webapi.Models.Inventory'.
+2025-01-28 09:41:56.900 +05:30 [INF] Executed action InventoryController.AddItem (webapidemo) in 51.603ms
+2025-01-28 09:41:56.902 +05:30 [INF] Executed endpoint 'InventoryController.AddItem (webapidemo)'
+2025-01-28 09:41:56.903 +05:30 [INF] HTTP POST /api/Inventory/additem responded 201
+2025-01-28 09:41:56.905 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/Inventory/additem - 201 null application/json; charset=utf-8 73.8944ms
+2025-01-28 09:44:08.421 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5283/api/Inventory/10 - application/json 61
+2025-01-28 09:44:08.438 +05:30 [INF] CORS policy execution failed.
+2025-01-28 09:44:08.441 +05:30 [INF] Request origin http://localhost:5283 does not have permission to access the resource.
+2025-01-28 09:44:08.446 +05:30 [INF] Executing endpoint 'InventoryController.UpdateItem (webapidemo)'
+2025-01-28 09:44:08.449 +05:30 [INF] Route matched with {action = "UpdateItem", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateItem(Int32, Webapi.DTO.UpdateItemDto) on controller InventoryController (webapidemo).
+2025-01-28 09:44:08.454 +05:30 [INF] Attempting to update item with ID: 10
+2025-01-28 09:44:08.486 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+WHERE [i].[ItemId] = @__p_0
+2025-01-28 09:44:08.498 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Inventories] SET [Price] = @p0, [Quantity] = @p1
+OUTPUT 1
+WHERE [ItemId] = @p2;
+2025-01-28 09:44:08.502 +05:30 [INF] Successfully updated item 10
+2025-01-28 09:44:08.503 +05:30 [INF] Executing OkObjectResult, writing value of type 'Webapi.Models.Inventory'.
+2025-01-28 09:44:08.504 +05:30 [INF] Executed action InventoryController.UpdateItem (webapidemo) in 53.386ms
+2025-01-28 09:44:08.506 +05:30 [INF] Executed endpoint 'InventoryController.UpdateItem (webapidemo)'
+2025-01-28 09:44:08.507 +05:30 [INF] HTTP PUT /api/Inventory/10 responded 200
+2025-01-28 09:44:08.508 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5283/api/Inventory/10 - 200 null application/json; charset=utf-8 87.1659ms
+2025-01-28 09:44:21.726 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/10 - null null
+2025-01-28 09:44:21.742 +05:30 [INF] Executing endpoint 'InventoryController.GetItemById (webapidemo)'
+2025-01-28 09:44:21.750 +05:30 [INF] Route matched with {action = "GetItemById", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItemById(Int32) on controller InventoryController (webapidemo).
+2025-01-28 09:44:21.757 +05:30 [INF] Retrieving item with ID: 10
+2025-01-28 09:44:21.763 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+WHERE [i].[ItemId] = @__p_0
+2025-01-28 09:44:21.767 +05:30 [INF] Successfully retrieved item 10
+2025-01-28 09:44:21.768 +05:30 [INF] Executing OkObjectResult, writing value of type 'Webapi.Models.Inventory'.
+2025-01-28 09:44:21.770 +05:30 [INF] Executed action InventoryController.GetItemById (webapidemo) in 14.6652ms
+2025-01-28 09:44:21.772 +05:30 [INF] Executed endpoint 'InventoryController.GetItemById (webapidemo)'
+2025-01-28 09:44:21.774 +05:30 [INF] HTTP GET /api/Inventory/10 responded 200
+2025-01-28 09:44:21.776 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/10 - 200 null application/json; charset=utf-8 49.3707ms
+2025-01-28 09:44:34.477 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/search?searchTerm=bat - null null
+2025-01-28 09:44:34.481 +05:30 [INF] Executing endpoint 'InventoryController.SearchItems (webapidemo)'
+2025-01-28 09:44:34.486 +05:30 [INF] Route matched with {action = "SearchItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SearchItems(System.String) on controller InventoryController (webapidemo).
+2025-01-28 09:44:34.494 +05:30 [INF] Searching items with term: bat
+2025-01-28 09:44:34.511 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__searchTerm_0_contains='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+WHERE [i].[Name] LIKE @__searchTerm_0_contains ESCAPE N'\'
+2025-01-28 09:44:34.513 +05:30 [INF] Search completed. Found 1 items
+2025-01-28 09:44:34.514 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-28 09:44:34.516 +05:30 [INF] Executed action InventoryController.SearchItems (webapidemo) in 25.6851ms
+2025-01-28 09:44:34.520 +05:30 [INF] Executed endpoint 'InventoryController.SearchItems (webapidemo)'
+2025-01-28 09:44:34.522 +05:30 [INF] HTTP GET /api/Inventory/search responded 200
+2025-01-28 09:44:34.526 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/search?searchTerm=bat - 200 null application/json; charset=utf-8 49.0108ms
+2025-01-28 09:44:41.712 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:44:41.720 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 7.9412ms
+2025-01-28 09:44:41.742 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 09:44:41.744 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 2.6639ms
+2025-01-28 09:44:41.872 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 09:44:41.881 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.1705ms
+2025-01-28 09:44:54.512 +05:30 [INF] Application is shutting down...
+2025-01-28 09:45:13.151 +05:30 [INF] User profile is available. Using 'C:\Users\amal.biju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-28 09:45:13.323 +05:30 [INF] Now listening on: http://localhost:5283
+2025-01-28 09:45:13.397 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-28 09:45:13.422 +05:30 [INF] Hosting environment: Development
+2025-01-28 09:45:13.440 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:45:13.442 +05:30 [INF] Content root path: C:\Users\amal.biju\vscode\WEBAPI\copy\Webapi
+2025-01-28 09:45:13.561 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 123.3607ms
+2025-01-28 09:45:13.589 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 09:45:13.986 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-28 09:45:13.987 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 398.1196ms
+2025-01-28 09:45:13.998 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 11.2349ms
+2025-01-28 09:45:14.054 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 09:45:14.285 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 231.6501ms
+2025-01-28 09:45:33.293 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:45:33.302 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 8.7421ms
+2025-01-28 09:45:33.314 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 09:45:33.334 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-28 09:45:33.340 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 26.7586ms
+2025-01-28 09:45:33.360 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 25.7946ms
+2025-01-28 09:45:33.394 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 09:45:33.409 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.0548ms
+2025-01-28 09:45:37.159 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:45:37.169 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 9.8962ms
+2025-01-28 09:45:37.192 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 09:45:37.192 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-28 09:45:37.195 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 2.8417ms
+2025-01-28 09:45:37.197 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 4.3214ms
+2025-01-28 09:45:37.232 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 09:45:37.244 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.7064ms
+2025-01-28 09:45:52.073 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:45:52.077 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 4.0116ms
+2025-01-28 09:45:52.094 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 09:45:52.095 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-28 09:45:52.098 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 4.1242ms
+2025-01-28 09:45:52.101 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 6.7322ms
+2025-01-28 09:45:52.159 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 09:45:52.164 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.6589ms
+2025-01-28 09:46:03.605 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:46:03.611 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 5.6254ms
+2025-01-28 09:46:03.664 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 09:46:03.667 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 3.1955ms
+2025-01-28 09:46:03.671 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-28 09:46:03.674 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 3.3821ms
+2025-01-28 09:46:03.771 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 09:46:03.779 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.5184ms
+2025-01-28 09:46:09.738 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:46:09.748 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 9.3192ms
+2025-01-28 09:46:09.869 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 09:46:09.872 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 2.4189ms
+2025-01-28 09:46:09.875 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-28 09:46:09.877 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 1.9991ms
+2025-01-28 09:46:09.985 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 09:46:09.994 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.6734ms
+2025-01-28 09:46:12.272 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:46:12.280 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 7.2633ms
+2025-01-28 09:46:12.289 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:46:12.293 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 3.5859ms
+2025-01-28 09:46:12.317 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 09:46:12.318 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-28 09:46:12.321 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 3.9665ms
+2025-01-28 09:46:12.323 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 5.4234ms
+2025-01-28 09:46:12.455 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 09:46:12.466 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.5132ms
+2025-01-28 09:46:21.585 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:46:21.593 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 8.2441ms
+2025-01-28 09:46:21.608 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:46:21.610 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 2.2607ms
+2025-01-28 09:46:21.641 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 09:46:21.642 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-28 09:46:21.646 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 5.145ms
+2025-01-28 09:46:21.652 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 9.8873ms
+2025-01-28 09:46:21.773 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 09:46:21.782 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.8467ms
+2025-01-28 09:46:36.420 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:46:36.423 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 3.7505ms
+2025-01-28 09:46:36.427 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:46:36.429 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 1.6806ms
+2025-01-28 09:46:36.447 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 09:46:36.447 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-28 09:46:36.454 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 6.5577ms
+2025-01-28 09:46:36.457 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 9.347ms
+2025-01-28 09:46:36.576 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 09:46:36.587 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.323ms
+2025-01-28 09:46:38.755 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:46:38.761 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 5.8762ms
+2025-01-28 09:46:38.776 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:46:38.783 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 6.5369ms
+2025-01-28 09:46:38.817 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 09:46:38.818 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-28 09:46:38.822 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 4.9448ms
+2025-01-28 09:46:38.826 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 8.5055ms
+2025-01-28 09:46:38.946 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 09:46:38.954 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.4273ms
+2025-01-28 09:46:50.060 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:46:50.087 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:46:50.091 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 30.4215ms
+2025-01-28 09:46:50.094 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 6.9459ms
+2025-01-28 09:46:50.112 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 09:46:50.121 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-28 09:46:50.125 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 12.8835ms
+2025-01-28 09:46:50.130 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 8.6189ms
+2025-01-28 09:46:50.166 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 09:46:50.178 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.1319ms
+2025-01-28 09:47:04.709 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:47:04.716 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 6.8804ms
+2025-01-28 09:47:04.731 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 09:47:04.732 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-28 09:47:04.736 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 5.0398ms
+2025-01-28 09:47:04.746 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 13.3724ms
+2025-01-28 09:47:04.786 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 09:47:04.794 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.9067ms
+2025-01-28 09:50:37.421 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:50:37.423 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 2.3631ms
+2025-01-28 09:50:37.453 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 09:50:37.455 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 2.6416ms
+2025-01-28 09:50:37.458 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-28 09:50:37.460 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 1.6788ms
+2025-01-28 09:50:37.652 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 09:50:37.656 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 4.6961ms
+2025-01-28 09:50:45.699 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:50:45.706 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 7.497ms
+2025-01-28 09:50:45.726 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 09:50:45.727 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-28 09:50:45.728 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 2.2755ms
+2025-01-28 09:50:45.738 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 11.3465ms
+2025-01-28 09:50:46.025 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 09:50:46.042 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.6024ms
+2025-01-28 09:51:33.304 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:51:33.306 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 1.6775ms
+2025-01-28 09:51:33.321 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-28 09:51:33.321 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 09:51:33.323 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 2.1713ms
+2025-01-28 09:51:33.326 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 5.4632ms
+2025-01-28 09:51:33.451 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 09:51:33.457 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.7325ms
+2025-01-28 09:52:02.509 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 09:52:02.543 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 33.2116ms
+2025-01-28 09:52:02.731 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 09:52:02.733 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 2.2916ms
+2025-01-28 09:52:02.746 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-28 09:52:02.751 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 4.8996ms
+2025-01-28 09:52:02.977 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 09:52:02.981 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 4.5355ms
+2025-01-28 10:17:13.943 +05:30 [INF] User profile is available. Using 'C:\Users\amal.biju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-28 10:17:14.115 +05:30 [INF] Now listening on: http://localhost:5283
+2025-01-28 10:17:14.288 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-28 10:17:14.364 +05:30 [INF] Hosting environment: Development
+2025-01-28 10:17:14.458 +05:30 [INF] Content root path: C:\Users\amal.biju\vscode\WEBAPI\copy\Webapi
+2025-01-28 10:19:48.073 +05:30 [INF] User profile is available. Using 'C:\Users\amal.biju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-28 10:19:48.194 +05:30 [INF] Now listening on: http://localhost:5283
+2025-01-28 10:19:48.197 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-28 10:19:48.198 +05:30 [INF] Hosting environment: Development
+2025-01-28 10:19:48.198 +05:30 [INF] Content root path: C:\Users\amal.biju\vscode\WEBAPI\copy\Webapi
+2025-01-28 10:20:32.650 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 10:20:32.727 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 78.7506ms
+2025-01-28 10:20:32.753 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 10:20:32.757 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 3.837ms
+2025-01-28 10:20:32.762 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-28 10:20:32.767 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 4.3696ms
+2025-01-28 10:20:32.908 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 10:20:33.000 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 91.4075ms
+2025-01-28 10:20:36.305 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-01-28 10:20:36.308 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 3.14ms
+2025-01-28 10:20:36.319 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-28 10:20:36.319 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-01-28 10:20:36.326 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 6.7865ms
+2025-01-28 10:20:36.336 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 16.5357ms
+2025-01-28 10:20:36.362 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-01-28 10:20:36.375 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.234ms
