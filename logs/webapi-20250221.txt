@@ -1,0 +1,559 @@
+2025-02-21 08:10:34.818 +05:30 [INF] User profile is available. Using 'C:\Users\amal.biju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-21 08:10:37.900 +05:30 [INF] Now listening on: http://localhost:5283
+2025-02-21 08:10:40.793 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-21 08:10:43.785 +05:30 [INF] Hosting environment: Development
+2025-02-21 08:10:45.662 +05:30 [INF] Content root path: C:\Users\amal.biju\vscode\WEBAPI\Webapi
+2025-02-21 08:10:53.593 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/ - null null
+2025-02-21 08:10:57.475 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-02-21 08:11:05.030 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-02-21 08:11:12.147 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 14671.691ms
+2025-02-21 08:11:12.401 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-02-21 08:11:15.497 +05:30 [INF] HTTP GET / responded 404
+2025-02-21 08:11:16.487 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/ - 499 null null 22893.0022ms
+2025-02-21 08:11:17.795 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5283/, Response status code: 499
+2025-02-21 08:11:25.010 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-02-21 08:11:25.016 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 5.8454ms
+2025-02-21 08:11:25.042 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.css - null null
+2025-02-21 08:11:25.043 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/swagger-ui-bundle.js - null null
+2025-02-21 08:11:25.053 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/swagger-ui.css - null null
+2025-02-21 08:11:25.073 +05:30 [INF] The file /index.css was not modified
+2025-02-21 08:11:25.087 +05:30 [INF] The file /swagger-ui.css was not modified
+2025-02-21 08:11:25.087 +05:30 [INF] The file /swagger-ui-bundle.js was not modified
+2025-02-21 08:11:25.089 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.css - 304 null text/css 46.817ms
+2025-02-21 08:11:25.089 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/swagger-ui.css - 304 null text/css 36.1449ms
+2025-02-21 08:11:25.165 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/swagger-ui-bundle.js - 304 null text/javascript 121.7105ms
+2025-02-21 08:11:25.235 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-21 08:11:25.408 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-02-21 08:11:25.423 +05:30 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2025-02-21 08:11:25.437 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/swagger-ui-standalone-preset.js - 304 null text/javascript 202.5896ms
+2025-02-21 08:11:25.438 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 29.9688ms
+2025-02-21 08:11:26.555 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-02-21 08:11:26.715 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 159.4347ms
+2025-02-21 08:11:27.121 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/favicon-32x32.png - null null
+2025-02-21 08:11:27.124 +05:30 [INF] The file /favicon-32x32.png was not modified
+2025-02-21 08:11:27.125 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/favicon-32x32.png - 304 null image/png 3.3409ms
+2025-02-21 08:12:52.564 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/login - application/json 48
+2025-02-21 08:12:52.571 +05:30 [INF] CORS policy execution successful.
+2025-02-21 08:12:52.606 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-21 08:12:52.622 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-21 08:12:52.831 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-02-21 08:12:52.868 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 235.8952ms
+2025-02-21 08:12:52.869 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-21 08:12:52.870 +05:30 [INF] HTTP POST /api/User/login responded 400
+2025-02-21 08:12:52.872 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/login - 400 null application/problem+json; charset=utf-8 307.6911ms
+2025-02-21 08:13:05.853 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/login - application/json 54
+2025-02-21 08:13:05.876 +05:30 [INF] CORS policy execution successful.
+2025-02-21 08:13:05.879 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-21 08:13:05.884 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-21 08:13:06.331 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Inventory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-02-21 08:13:07.011 +05:30 [INF] Executed DbCommand (47ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-21 08:13:07.096 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-21 08:13:07.104 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 1216.533ms
+2025-02-21 08:13:07.105 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-21 08:13:07.106 +05:30 [INF] HTTP POST /api/User/login responded 200
+2025-02-21 08:13:07.115 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/login - 200 null application/json; charset=utf-8 1262.5472ms
+2025-02-21 08:13:29.817 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/User/protected - null null
+2025-02-21 08:13:29.862 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Protected (webapidemo)'
+2025-02-21 08:13:29.868 +05:30 [INF] Route matched with {action = "Protected", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Protected() on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-21 08:13:29.878 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-02-21 08:13:29.881 +05:30 [INF] Executed action Webapi.Controllers.UserController.Protected (webapidemo) in 9.1327ms
+2025-02-21 08:13:29.884 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Protected (webapidemo)'
+2025-02-21 08:13:29.886 +05:30 [INF] HTTP GET /api/User/protected responded 200
+2025-02-21 08:13:29.889 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/User/protected - 200 null text/plain; charset=utf-8 71.4315ms
+2025-02-21 08:13:46.887 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-21 08:13:46.895 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-21 08:13:46.898 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-21 08:13:46.994 +05:30 [INF] Retrieving all inventory items
+2025-02-21 08:13:47.044 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-21 08:13:47.068 +05:30 [INF] Retrieved 7 items
+2025-02-21 08:13:47.069 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-21 08:13:47.079 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 177.4552ms
+2025-02-21 08:13:47.080 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-21 08:13:47.084 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-21 08:13:47.089 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 199.2632ms
+2025-02-21 10:07:12.383 +05:30 [INF] Application is shutting down...
+2025-02-21 10:07:46.994 +05:30 [INF] User profile is available. Using 'C:\Users\amal.biju\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-21 10:07:47.304 +05:30 [INF] Now listening on: http://localhost:5283
+2025-02-21 10:07:47.310 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-21 10:07:47.312 +05:30 [INF] Hosting environment: Development
+2025-02-21 10:07:47.313 +05:30 [INF] Content root path: C:\Users\amal.biju\vscode\WEBAPI\Webapi
+2025-02-21 10:08:06.201 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-21 10:08:06.244 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-02-21 10:08:06.249 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-02-21 10:08:06.277 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-21 10:08:06.303 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-21 10:08:06.880 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Inventory'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-02-21 10:08:07.590 +05:30 [INF] Executed DbCommand (50ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-21 10:08:07.685 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-21 10:08:07.703 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 1395.4254ms
+2025-02-21 10:08:07.709 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-21 10:08:07.711 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-21 10:08:07.727 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 1527.0197ms
+2025-02-21 10:08:07.759 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-21 10:08:07.840 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-21 10:08:07.844 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-21 10:08:07.939 +05:30 [INF] Retrieving all inventory items
+2025-02-21 10:08:07.983 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-21 10:08:08.000 +05:30 [INF] Retrieved 7 items
+2025-02-21 10:08:08.002 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-21 10:08:08.021 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 172.6038ms
+2025-02-21 10:08:08.023 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-21 10:08:08.024 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-21 10:08:08.026 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 266.8462ms
+2025-02-21 10:59:39.699 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - null null
+2025-02-21 10:59:39.712 +05:30 [INF] CORS policy execution successful.
+2025-02-21 10:59:39.714 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - 204 null null 14.4604ms
+2025-02-21 10:59:39.721 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/Customer/register - application/json 80
+2025-02-21 10:59:39.739 +05:30 [INF] CORS policy execution successful.
+2025-02-21 10:59:39.743 +05:30 [INF] Executing endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 10:59:39.762 +05:30 [INF] Route matched with {action = "Register", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CustomerRegisterDto) on controller CustomerController (webapidemo).
+2025-02-21 10:59:39.989 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@__registerDto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Email], [c].[Password], [c].[Username]
+FROM [Customers] AS [c]
+WHERE [c].[Username] = @__registerDto_Username_0
+2025-02-21 10:59:40.025 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-21 10:59:40.028 +05:30 [INF] Executed action CustomerController.Register (webapidemo) in 262.1725ms
+2025-02-21 10:59:40.030 +05:30 [INF] Executed endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 10:59:40.031 +05:30 [INF] HTTP POST /api/Customer/register responded 400
+2025-02-21 10:59:40.034 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/Customer/register - 400 null text/plain; charset=utf-8 313.1807ms
+2025-02-21 10:59:48.326 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - null null
+2025-02-21 10:59:48.328 +05:30 [INF] CORS policy execution successful.
+2025-02-21 10:59:48.330 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - 204 null null 4.2414ms
+2025-02-21 10:59:48.334 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/Customer/register - application/json 80
+2025-02-21 10:59:48.346 +05:30 [INF] CORS policy execution successful.
+2025-02-21 10:59:48.347 +05:30 [INF] Executing endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 10:59:48.348 +05:30 [INF] Route matched with {action = "Register", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CustomerRegisterDto) on controller CustomerController (webapidemo).
+2025-02-21 10:59:48.382 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__registerDto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Email], [c].[Password], [c].[Username]
+FROM [Customers] AS [c]
+WHERE [c].[Username] = @__registerDto_Username_0
+2025-02-21 10:59:48.386 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-21 10:59:48.392 +05:30 [INF] Executed action CustomerController.Register (webapidemo) in 23.4014ms
+2025-02-21 10:59:48.394 +05:30 [INF] Executed endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 10:59:48.395 +05:30 [INF] HTTP POST /api/Customer/register responded 400
+2025-02-21 10:59:48.397 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/Customer/register - 400 null text/plain; charset=utf-8 62.7087ms
+2025-02-21 11:00:19.917 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - null null
+2025-02-21 11:00:19.923 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:00:19.924 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - 204 null null 6.7606ms
+2025-02-21 11:00:19.927 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/Customer/register - application/json 80
+2025-02-21 11:00:19.933 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:00:19.935 +05:30 [INF] Executing endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:00:19.937 +05:30 [INF] Route matched with {action = "Register", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CustomerRegisterDto) on controller CustomerController (webapidemo).
+2025-02-21 11:00:19.956 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__registerDto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Email], [c].[Password], [c].[Username]
+FROM [Customers] AS [c]
+WHERE [c].[Username] = @__registerDto_Username_0
+2025-02-21 11:00:19.962 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-21 11:00:19.966 +05:30 [INF] Executed action CustomerController.Register (webapidemo) in 23.8274ms
+2025-02-21 11:00:19.971 +05:30 [INF] Executed endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:00:19.972 +05:30 [INF] HTTP POST /api/Customer/register responded 400
+2025-02-21 11:00:19.974 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/Customer/register - 400 null text/plain; charset=utf-8 46.5172ms
+2025-02-21 11:01:04.098 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - null null
+2025-02-21 11:01:04.104 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:01:04.108 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - 204 null null 9.136ms
+2025-02-21 11:01:04.118 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/Customer/register - application/json 83
+2025-02-21 11:01:04.126 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:01:04.128 +05:30 [INF] Executing endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:01:04.131 +05:30 [INF] Route matched with {action = "Register", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CustomerRegisterDto) on controller CustomerController (webapidemo).
+2025-02-21 11:01:04.154 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__registerDto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Email], [c].[Password], [c].[Username]
+FROM [Customers] AS [c]
+WHERE [c].[Username] = @__registerDto_Username_0
+2025-02-21 11:01:04.161 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-21 11:01:04.163 +05:30 [INF] Executed action CustomerController.Register (webapidemo) in 24.0618ms
+2025-02-21 11:01:04.166 +05:30 [INF] Executed endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:01:04.167 +05:30 [INF] HTTP POST /api/Customer/register responded 400
+2025-02-21 11:01:04.169 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/Customer/register - 400 null text/plain; charset=utf-8 49.8013ms
+2025-02-21 11:02:00.413 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - null null
+2025-02-21 11:02:00.416 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:02:00.418 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - 204 null null 5.205ms
+2025-02-21 11:02:00.426 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/Customer/register - application/json 83
+2025-02-21 11:02:00.430 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:02:00.433 +05:30 [INF] Executing endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:02:00.435 +05:30 [INF] Route matched with {action = "Register", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CustomerRegisterDto) on controller CustomerController (webapidemo).
+2025-02-21 11:02:00.451 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__registerDto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Email], [c].[Password], [c].[Username]
+FROM [Customers] AS [c]
+WHERE [c].[Username] = @__registerDto_Username_0
+2025-02-21 11:02:00.458 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-21 11:02:00.462 +05:30 [INF] Executed action CustomerController.Register (webapidemo) in 20.5155ms
+2025-02-21 11:02:00.464 +05:30 [INF] Executed endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:02:00.465 +05:30 [INF] HTTP POST /api/Customer/register responded 400
+2025-02-21 11:02:00.466 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/Customer/register - 400 null text/plain; charset=utf-8 39.5166ms
+2025-02-21 11:07:44.866 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - null null
+2025-02-21 11:07:44.871 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:07:44.872 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - 204 null null 5.5544ms
+2025-02-21 11:07:44.874 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/Customer/register - application/json 83
+2025-02-21 11:07:44.880 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:07:44.881 +05:30 [INF] Executing endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:07:44.882 +05:30 [INF] Route matched with {action = "Register", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CustomerRegisterDto) on controller CustomerController (webapidemo).
+2025-02-21 11:07:44.987 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[@__registerDto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Email], [c].[Password], [c].[Username]
+FROM [Customers] AS [c]
+WHERE [c].[Username] = @__registerDto_Username_0
+2025-02-21 11:07:44.991 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-21 11:07:44.997 +05:30 [INF] Executed action CustomerController.Register (webapidemo) in 113.4009ms
+2025-02-21 11:07:45.007 +05:30 [INF] Executed endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:07:45.008 +05:30 [INF] HTTP POST /api/Customer/register responded 400
+2025-02-21 11:07:45.017 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/Customer/register - 400 null text/plain; charset=utf-8 142.9379ms
+2025-02-21 11:07:47.499 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/Customer/register - application/json 83
+2025-02-21 11:07:47.502 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:07:47.503 +05:30 [INF] Executing endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:07:47.505 +05:30 [INF] Route matched with {action = "Register", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CustomerRegisterDto) on controller CustomerController (webapidemo).
+2025-02-21 11:07:47.521 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__registerDto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Email], [c].[Password], [c].[Username]
+FROM [Customers] AS [c]
+WHERE [c].[Username] = @__registerDto_Username_0
+2025-02-21 11:07:47.533 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-21 11:07:47.534 +05:30 [INF] Executed action CustomerController.Register (webapidemo) in 19.1113ms
+2025-02-21 11:07:47.535 +05:30 [INF] Executed endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:07:47.536 +05:30 [INF] HTTP POST /api/Customer/register responded 400
+2025-02-21 11:07:47.539 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/Customer/register - 400 null text/plain; charset=utf-8 40.0495ms
+2025-02-21 11:08:06.971 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - null null
+2025-02-21 11:08:06.976 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:08:06.977 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - 204 null null 5.6788ms
+2025-02-21 11:08:06.985 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/Customer/register - application/json 80
+2025-02-21 11:08:06.990 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:08:06.991 +05:30 [INF] Executing endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:08:06.991 +05:30 [INF] Route matched with {action = "Register", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CustomerRegisterDto) on controller CustomerController (webapidemo).
+2025-02-21 11:08:07.005 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__registerDto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Email], [c].[Password], [c].[Username]
+FROM [Customers] AS [c]
+WHERE [c].[Username] = @__registerDto_Username_0
+2025-02-21 11:08:07.007 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-21 11:08:07.011 +05:30 [INF] Executed action CustomerController.Register (webapidemo) in 16.684ms
+2025-02-21 11:08:07.013 +05:30 [INF] Executed endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:08:07.014 +05:30 [INF] HTTP POST /api/Customer/register responded 400
+2025-02-21 11:08:07.020 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/Customer/register - 400 null text/plain; charset=utf-8 35.0132ms
+2025-02-21 11:08:19.626 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - null null
+2025-02-21 11:08:19.628 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:08:19.629 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - 204 null null 3.2745ms
+2025-02-21 11:08:19.632 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/Customer/register - application/json 80
+2025-02-21 11:08:19.641 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:08:19.643 +05:30 [INF] Executing endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:08:19.644 +05:30 [INF] Route matched with {action = "Register", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CustomerRegisterDto) on controller CustomerController (webapidemo).
+2025-02-21 11:08:19.658 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__registerDto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Email], [c].[Password], [c].[Username]
+FROM [Customers] AS [c]
+WHERE [c].[Username] = @__registerDto_Username_0
+2025-02-21 11:08:19.662 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-21 11:08:19.665 +05:30 [INF] Executed action CustomerController.Register (webapidemo) in 17.4627ms
+2025-02-21 11:08:19.666 +05:30 [INF] Executed endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:08:19.673 +05:30 [INF] HTTP POST /api/Customer/register responded 400
+2025-02-21 11:08:19.675 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/Customer/register - 400 null text/plain; charset=utf-8 42.966ms
+2025-02-21 11:08:46.113 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - null null
+2025-02-21 11:08:46.171 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:08:46.173 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - 204 null null 59.3552ms
+2025-02-21 11:08:47.068 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/Customer/register - application/json 80
+2025-02-21 11:08:47.072 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:08:47.074 +05:30 [INF] Executing endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:08:47.081 +05:30 [INF] Route matched with {action = "Register", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CustomerRegisterDto) on controller CustomerController (webapidemo).
+2025-02-21 11:08:47.104 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__registerDto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Email], [c].[Password], [c].[Username]
+FROM [Customers] AS [c]
+WHERE [c].[Username] = @__registerDto_Username_0
+2025-02-21 11:08:47.107 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-21 11:08:47.114 +05:30 [INF] Executed action CustomerController.Register (webapidemo) in 26.8914ms
+2025-02-21 11:08:47.116 +05:30 [INF] Executed endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:08:47.117 +05:30 [INF] HTTP POST /api/Customer/register responded 400
+2025-02-21 11:08:47.118 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/Customer/register - 400 null text/plain; charset=utf-8 49.7417ms
+2025-02-21 11:10:05.509 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - null null
+2025-02-21 11:10:05.523 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:10:05.525 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - 204 null null 16.1097ms
+2025-02-21 11:10:05.535 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/Customer/register - application/json 80
+2025-02-21 11:10:05.538 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:10:05.539 +05:30 [INF] Executing endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:10:05.540 +05:30 [INF] Route matched with {action = "Register", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CustomerRegisterDto) on controller CustomerController (webapidemo).
+2025-02-21 11:10:05.557 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__registerDto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Email], [c].[Password], [c].[Username]
+FROM [Customers] AS [c]
+WHERE [c].[Username] = @__registerDto_Username_0
+2025-02-21 11:10:05.560 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-21 11:10:05.561 +05:30 [INF] Executed action CustomerController.Register (webapidemo) in 18.2152ms
+2025-02-21 11:10:05.566 +05:30 [INF] Executed endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:10:05.568 +05:30 [INF] HTTP POST /api/Customer/register responded 400
+2025-02-21 11:10:05.569 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/Customer/register - 400 null text/plain; charset=utf-8 33.5739ms
+2025-02-21 11:10:51.101 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - null null
+2025-02-21 11:10:51.107 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:10:51.114 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - 204 null null 13.0647ms
+2025-02-21 11:10:51.118 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/Customer/register - application/json 80
+2025-02-21 11:10:51.124 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:10:51.129 +05:30 [INF] Executing endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:10:51.132 +05:30 [INF] Route matched with {action = "Register", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CustomerRegisterDto) on controller CustomerController (webapidemo).
+2025-02-21 11:10:51.148 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__registerDto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Email], [c].[Password], [c].[Username]
+FROM [Customers] AS [c]
+WHERE [c].[Username] = @__registerDto_Username_0
+2025-02-21 11:10:51.151 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-21 11:10:51.153 +05:30 [INF] Executed action CustomerController.Register (webapidemo) in 17.0433ms
+2025-02-21 11:10:51.155 +05:30 [INF] Executed endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:10:51.157 +05:30 [INF] HTTP POST /api/Customer/register responded 400
+2025-02-21 11:10:51.162 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/Customer/register - 400 null text/plain; charset=utf-8 43.8359ms
+2025-02-21 11:11:36.162 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/Customer/register - application/json 93
+2025-02-21 11:11:36.164 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:11:36.169 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-02-2025 03:43:07', Current time (UTC): '21-02-2025 05:41:36'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-02-21 11:11:36.186 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-02-2025 03:43:07', Current time (UTC): '21-02-2025 05:41:36'.
+2025-02-21 11:11:36.194 +05:30 [INF] Executing endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:11:36.196 +05:30 [INF] Route matched with {action = "Register", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CustomerRegisterDto) on controller CustomerController (webapidemo).
+2025-02-21 11:11:36.216 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__registerDto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Email], [c].[Password], [c].[Username]
+FROM [Customers] AS [c]
+WHERE [c].[Username] = @__registerDto_Username_0
+2025-02-21 11:11:36.230 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-21 11:11:36.233 +05:30 [INF] Executed action CustomerController.Register (webapidemo) in 35.0881ms
+2025-02-21 11:11:36.234 +05:30 [INF] Executed endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:11:36.236 +05:30 [INF] HTTP POST /api/Customer/register responded 401
+2025-02-21 11:11:36.246 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.set_StatusCode(Int32 value)
+   at Webapi.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\amal.biju\vscode\WEBAPI\Webapi\Middleware\ErrorHandlingMiddleware.cs:line 38
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-02-21 11:11:36.267 +05:30 [WRN] The response has already started, the error page middleware will not be executed.
+2025-02-21 11:11:36.268 +05:30 [ERR] Connection id "0HNAI664FTQGS", Request id "0HNAI664FTQGS:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.set_StatusCode(Int32 value)
+   at Webapi.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\amal.biju\vscode\WEBAPI\Webapi\Middleware\ErrorHandlingMiddleware.cs:line 38
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-02-21 11:11:36.285 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/Customer/register - 401 null text/plain 122.0916ms
+2025-02-21 11:12:11.556 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/User/protected - null null
+2025-02-21 11:12:11.561 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-02-2025 03:43:07', Current time (UTC): '21-02-2025 05:42:11'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-02-21 11:12:11.570 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-02-2025 03:43:07', Current time (UTC): '21-02-2025 05:42:11'.
+2025-02-21 11:12:11.573 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-21 11:12:11.578 +05:30 [INF] HTTP GET /api/User/protected responded 401
+2025-02-21 11:12:11.585 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.set_StatusCode(Int32 value)
+   at Webapi.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\amal.biju\vscode\WEBAPI\Webapi\Middleware\ErrorHandlingMiddleware.cs:line 38
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-02-21 11:12:11.588 +05:30 [WRN] The response has already started, the error page middleware will not be executed.
+2025-02-21 11:12:11.589 +05:30 [ERR] Connection id "0HNAI664FTQGT", Request id "0HNAI664FTQGT:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.set_StatusCode(Int32 value)
+   at Webapi.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\amal.biju\vscode\WEBAPI\Webapi\Middleware\ErrorHandlingMiddleware.cs:line 38
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-02-21 11:12:11.596 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/User/protected - 401 null text/plain 39.637ms
+2025-02-21 11:12:38.952 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/login - application/json 54
+2025-02-21 11:12:38.960 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:12:38.962 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-02-2025 03:43:07', Current time (UTC): '21-02-2025 05:42:38'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-02-21 11:12:38.967 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21-02-2025 03:43:07', Current time (UTC): '21-02-2025 05:42:38'.
+2025-02-21 11:12:38.970 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-21 11:12:38.977 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-21 11:12:39.000 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-21 11:12:39.006 +05:30 [WRN] No output formatter was found for content types '["text/plain","text/plain"]' to write the response.
+2025-02-21 11:12:39.011 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 31.7859ms
+2025-02-21 11:12:39.012 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-21 11:12:39.013 +05:30 [INF] HTTP POST /api/User/login responded 401
+2025-02-21 11:12:39.014 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.set_StatusCode(Int32 value)
+   at Webapi.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\amal.biju\vscode\WEBAPI\Webapi\Middleware\ErrorHandlingMiddleware.cs:line 38
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-02-21 11:12:39.023 +05:30 [WRN] The response has already started, the error page middleware will not be executed.
+2025-02-21 11:12:39.026 +05:30 [ERR] Connection id "0HNAI664FTQGU", Request id "0HNAI664FTQGU:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.set_StatusCode(Int32 value)
+   at Webapi.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\amal.biju\vscode\WEBAPI\Webapi\Middleware\ErrorHandlingMiddleware.cs:line 38
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-02-21 11:12:39.029 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/login - 401 null text/plain 77.1428ms
+2025-02-21 11:13:01.207 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-02-21 11:13:01.274 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 66.9471ms
+2025-02-21 11:13:01.305 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-02-21 11:13:01.307 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 2.8165ms
+2025-02-21 11:13:01.468 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-02-21 11:13:01.605 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 136.5531ms
+2025-02-21 11:13:28.919 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/login - application/json 54
+2025-02-21 11:13:28.922 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:13:28.923 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-21 11:13:28.925 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-21 11:13:28.942 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-21 11:13:28.945 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-21 11:13:28.947 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 20.8619ms
+2025-02-21 11:13:28.949 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-21 11:13:28.949 +05:30 [INF] HTTP POST /api/User/login responded 200
+2025-02-21 11:13:28.955 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/login - 200 null application/json; charset=utf-8 38.8476ms
+2025-02-21 11:14:08.041 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/Customer/register - application/json 93
+2025-02-21 11:14:08.055 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:14:08.056 +05:30 [INF] Executing endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:14:08.057 +05:30 [INF] Route matched with {action = "Register", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CustomerRegisterDto) on controller CustomerController (webapidemo).
+2025-02-21 11:14:08.071 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__registerDto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Email], [c].[Password], [c].[Username]
+FROM [Customers] AS [c]
+WHERE [c].[Username] = @__registerDto_Username_0
+2025-02-21 11:14:08.074 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-21 11:14:08.075 +05:30 [INF] Executed action CustomerController.Register (webapidemo) in 15.9077ms
+2025-02-21 11:14:08.077 +05:30 [INF] Executed endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:14:08.085 +05:30 [INF] HTTP POST /api/Customer/register responded 400
+2025-02-21 11:14:08.087 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/Customer/register - 400 null text/plain; charset=utf-8 46.3187ms
+2025-02-21 11:14:39.282 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - null null
+2025-02-21 11:14:39.310 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:14:39.311 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - 204 null null 29.1456ms
+2025-02-21 11:14:39.317 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/Customer/register - application/json 81
+2025-02-21 11:14:39.326 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:14:39.332 +05:30 [INF] Executing endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:14:39.342 +05:30 [INF] Route matched with {action = "Register", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CustomerRegisterDto) on controller CustomerController (webapidemo).
+2025-02-21 11:14:39.379 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[@__registerDto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Email], [c].[Password], [c].[Username]
+FROM [Customers] AS [c]
+WHERE [c].[Username] = @__registerDto_Username_0
+2025-02-21 11:14:39.528 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Email], [Password], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-02-21 11:14:39.566 +05:30 [INF] Executing OkObjectResult, writing value of type 'Result'.
+2025-02-21 11:14:39.568 +05:30 [INF] Executed action CustomerController.Register (webapidemo) in 222.647ms
+2025-02-21 11:14:39.575 +05:30 [INF] Executed endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:14:39.576 +05:30 [INF] HTTP POST /api/Customer/register responded 200
+2025-02-21 11:14:39.577 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/Customer/register - 200 null application/json; charset=utf-8 259.8175ms
+2025-02-21 11:17:26.471 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - null null
+2025-02-21 11:17:26.476 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:17:26.483 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - 204 null null 11.5598ms
+2025-02-21 11:17:26.486 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/Customer/register - application/json 80
+2025-02-21 11:17:26.493 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:17:26.500 +05:30 [INF] Executing endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:17:26.501 +05:30 [INF] Route matched with {action = "Register", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CustomerRegisterDto) on controller CustomerController (webapidemo).
+2025-02-21 11:17:26.524 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__registerDto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Email], [c].[Password], [c].[Username]
+FROM [Customers] AS [c]
+WHERE [c].[Username] = @__registerDto_Username_0
+2025-02-21 11:17:26.533 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-21 11:17:26.534 +05:30 [INF] Executed action CustomerController.Register (webapidemo) in 28.162ms
+2025-02-21 11:17:26.536 +05:30 [INF] Executed endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:17:26.537 +05:30 [INF] HTTP POST /api/Customer/register responded 400
+2025-02-21 11:17:26.539 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/Customer/register - 400 null text/plain; charset=utf-8 53.1965ms
+2025-02-21 11:17:31.640 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - null null
+2025-02-21 11:17:31.648 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:17:31.651 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5283/api/Customer/register - 204 null null 10.9807ms
+2025-02-21 11:17:31.657 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/Customer/register - application/json 83
+2025-02-21 11:17:31.662 +05:30 [INF] CORS policy execution successful.
+2025-02-21 11:17:31.668 +05:30 [INF] Executing endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:17:31.670 +05:30 [INF] Route matched with {action = "Register", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CustomerRegisterDto) on controller CustomerController (webapidemo).
+2025-02-21 11:17:31.686 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__registerDto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Email], [c].[Password], [c].[Username]
+FROM [Customers] AS [c]
+WHERE [c].[Username] = @__registerDto_Username_0
+2025-02-21 11:17:31.695 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Email], [Password], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-02-21 11:17:31.704 +05:30 [INF] Executing OkObjectResult, writing value of type 'Result'.
+2025-02-21 11:17:31.706 +05:30 [INF] Executed action CustomerController.Register (webapidemo) in 30.6771ms
+2025-02-21 11:17:31.708 +05:30 [INF] Executed endpoint 'CustomerController.Register (webapidemo)'
+2025-02-21 11:17:31.709 +05:30 [INF] HTTP POST /api/Customer/register responded 200
+2025-02-21 11:17:31.710 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/Customer/register - 200 null application/json; charset=utf-8 53.1142ms
+2025-02-21 13:53:54.383 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - null null
+2025-02-21 13:53:54.390 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - 200 null text/html;charset=utf-8 7.4694ms
+2025-02-21 13:53:54.419 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.js - null null
+2025-02-21 13:53:54.421 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.js - 200 null application/javascript;charset=utf-8 2.2197ms
+2025-02-21 13:53:54.567 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - null null
+2025-02-21 13:53:54.587 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.7474ms
+2025-02-21 13:54:01.375 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5283/api/User/Login - application/json; charset=utf-8 44
+2025-02-21 13:54:01.381 +05:30 [INF] Executing endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-21 13:54:01.383 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Webapi.DTO.UserLoginDto) on controller Webapi.Controllers.UserController (webapidemo).
+2025-02-21 13:54:01.450 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__loginDto_Username_0='?' (Size = 50), @__loginDto_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginDto_Username_0 AND [u].[Password] = @__loginDto_Password_1
+2025-02-21 13:54:01.453 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-21 13:54:01.454 +05:30 [INF] Executed action Webapi.Controllers.UserController.Login (webapidemo) in 68.5106ms
+2025-02-21 13:54:01.456 +05:30 [INF] Executed endpoint 'Webapi.Controllers.UserController.Login (webapidemo)'
+2025-02-21 13:54:01.457 +05:30 [INF] HTTP POST /api/User/Login responded 200
+2025-02-21 13:54:01.458 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5283/api/User/Login - 200 null application/json; charset=utf-8 82.2153ms
+2025-02-21 13:54:01.467 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-21 13:54:01.471 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-21 13:54:01.472 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-21 13:54:01.474 +05:30 [INF] Retrieving all inventory items
+2025-02-21 13:54:01.478 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-21 13:54:01.480 +05:30 [INF] Retrieved 7 items
+2025-02-21 13:54:01.481 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-21 13:54:01.482 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 8.3903ms
+2025-02-21 13:54:01.483 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-21 13:54:01.484 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-21 13:54:01.485 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 17.4583ms
+2025-02-21 13:54:05.001 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-21 13:54:05.008 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-21 13:54:05.009 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-21 13:54:05.016 +05:30 [INF] Retrieving all inventory items
+2025-02-21 13:54:05.019 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-21 13:54:05.022 +05:30 [INF] Retrieved 7 items
+2025-02-21 13:54:05.023 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-21 13:54:05.024 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 7.9445ms
+2025-02-21 13:54:05.034 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-21 13:54:05.036 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-21 13:54:05.038 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 36.9299ms
+2025-02-21 13:54:08.518 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - null null
+2025-02-21 13:54:08.521 +05:30 [INF] Executing endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-21 13:54:08.523 +05:30 [INF] Route matched with {action = "GetItems", controller = "Inventory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller InventoryController (webapidemo).
+2025-02-21 13:54:08.525 +05:30 [INF] Retrieving all inventory items
+2025-02-21 13:54:08.527 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[ItemId], [i].[Name], [i].[Price], [i].[Quantity]
+FROM [Inventories] AS [i]
+2025-02-21 13:54:08.532 +05:30 [INF] Retrieved 7 items
+2025-02-21 13:54:08.534 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Webapi.Models.Inventory, webapidemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-21 13:54:08.535 +05:30 [INF] Executed action InventoryController.GetItems (webapidemo) in 10.5974ms
+2025-02-21 13:54:08.536 +05:30 [INF] Executed endpoint 'InventoryController.GetItems (webapidemo)'
+2025-02-21 13:54:08.537 +05:30 [INF] HTTP GET /api/Inventory/Display%20items responded 200
+2025-02-21 13:54:08.538 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5283/api/Inventory/Display items - 200 null application/json; charset=utf-8 20.2672ms

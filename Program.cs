@@ -1,3 +1,15 @@
+// Title        : Inventory Management Application API
+// Author       : Amal Biju
+// Created on   : 22/01/2025
+// Updated on   : 05/02/2025
+// Reviewed by  : Sabapathi Shanmugam
+// Reviewed at  : 01/02/2025
+
+
+
+// Description  : Main entry point for the Inventory Management API. 
+//                Configures services, middleware, and application settings.
+
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -8,24 +20,27 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Webapi.Utilities;  
 using Serilog;
 
+// Initialize the web application builder
 var builder = WebApplication.CreateBuilder(args);
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 
-// Add services to the container.
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<ITokenService, TokenService>();
+// Register core services
+builder.Services.AddControllers(); // Add support for MVC controllers
+builder.Services.AddEndpointsApiExplorer(); // Enable API endpoint exploration
+builder.Services.AddSwaggerGen(); // Add Swagger documentation support
+builder.Services.AddScoped<ITokenService, TokenService>(); // Register token service
 
+// Configure Swagger documentation
 builder.Services.AddSwaggerGen(options =>
 {
-    options.EnableAnnotations(); 
+    options.EnableAnnotations(); // Enable Swagger annotations
     options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
     {
         Title = "Inventory Management API",
         Version = "v1"
     });
 
+    // Configure JWT authentication in Swagger
     options.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -36,6 +51,7 @@ builder.Services.AddSwaggerGen(options =>
         Description = "Enter 'Bearer' followed by a space and your JWT token. Example: Bearer eyJhbGciOiJIUzI1NiIs..."
     });
 
+    // Add security requirement for JWT
     options.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
     {
         {
@@ -52,32 +68,28 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+// Configure CORS policy
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", builder =>
     {
-        builder.AllowAnyOrigin()
-               .AllowAnyMethod()
-               .AllowAnyHeader();
+        builder.AllowAnyOrigin() // Allow requests from any origin
+               .AllowAnyMethod() // Allow any HTTP method
+               .AllowAnyHeader(); // Allow any header
     });
 });
- 
-// Add AutoMapper with the MappingProfile
+
+// Configure AutoMapper for DTO mapping
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
-// Configure Entity Framework and SQL Server
+// Configure Entity Framework Core with SQL Server
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Register CustomerService
-builder.Services.AddScoped<CustomerService>(); 
-
-// Register PurchaseService
-builder.Services.AddScoped<PurchaseService>(); 
-
-// Register InventoryService
-builder.Services.AddScoped<InventoryService>(); 
-
+// Register application services
+builder.Services.AddScoped<CustomerService>(); // Register customer service
+builder.Services.AddScoped<PurchaseService>(); // Register purchase service
+builder.Services.AddScoped<InventoryService>(); // Register inventory service
 
 // Configure JWT Authentication
 builder.Services.AddAuthentication("Bearer")
@@ -85,15 +97,16 @@ builder.Services.AddAuthentication("Bearer")
     {
         options.TokenValidationParameters = new TokenValidationParameters
         {
-            ValidateIssuer = true,
-            ValidateAudience = true,
-            ValidateLifetime = true,
-            ValidateIssuerSigningKey = true,
-            ValidIssuer = jwtSettings["Issuer"],
-            ValidAudience = jwtSettings["Audience"],
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Key"]))
+            ValidateIssuer = true, // Validate token issuer
+            ValidateAudience = true, // Validate token audience
+            ValidateLifetime = true, // Validate token expiration
+            ValidateIssuerSigningKey = true, // Validate signing key
+            ValidIssuer = jwtSettings["Issuer"], // Set valid issuer
+            ValidAudience = jwtSettings["Audience"], // Set valid audience
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Key"])) // Set signing key
         };
 
+        // Configure authentication events
         options.Events = new JwtBearerEvents
         {
             OnAuthenticationFailed = context =>
@@ -111,36 +124,38 @@ builder.Services.AddAuthentication("Bearer")
         };
     });
 
-// Add TokenService for generating JWT tokens
+// Register TokenService for JWT generation
 builder.Services.AddSingleton<TokenService>();
 
-// Configure Serilog
+// Configure Serilog for logging
 Log.Logger = new LoggerConfiguration()
-    .WriteTo.Console()
-    .WriteTo.File("logs/webapi-.txt", rollingInterval: RollingInterval.Day)
+    .WriteTo.Console() // Log to console
+    .WriteTo.File("logs/webapi-.txt", rollingInterval: RollingInterval.Day) // Log to file with daily rotation
     .CreateLogger();
 
-builder.Host.UseSerilog();
+builder.Host.UseSerilog(); // Use Serilog for logging
 
+// Build the application
 var app = builder.Build();
 
-// Middleware
+// Configure middleware pipeline
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwagger(); // Enable Swagger in development
+    app.UseSwaggerUI(); // Enable Swagger UI
 }
 
-app.UseHttpsRedirection();
-app.UseMiddleware<Webapi.Middleware.ErrorHandlingMiddleware>();
-app.UseCors("AllowAll");
+app.UseHttpsRedirection(); // Enforce HTTPS
+app.UseMiddleware<Webapi.Middleware.ErrorHandlingMiddleware>(); // Add custom error handling
+app.UseCors("AllowAll"); // Apply CORS policy
 
-app.UseMiddleware<Webapi.Middleware.RequestLoggingMiddleware>();
-app.UseHttpsRedirection();
+app.UseMiddleware<Webapi.Middleware.RequestLoggingMiddleware>(); // Add request logging
+app.UseHttpsRedirection(); // Enforce HTTPS
 
-app.UseAuthentication();
-app.UseAuthorization();
+app.UseAuthentication(); // Enable authentication
+app.UseAuthorization(); // Enable authorization
 
-app.MapControllers();
+app.MapControllers(); // Map controller routes
 
+// Start the application
 app.Run();
